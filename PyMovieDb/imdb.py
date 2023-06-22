@@ -99,7 +99,7 @@ class IMDB:
                     output.append({
                         'id': file_id,
                         "name": name,
-                        "url": f"{url}",
+                        "url": f"https://www.imdb.com{url}",
                         "poster": image
                        })
                 except IndexError:
@@ -146,7 +146,7 @@ class IMDB:
         output = {
             "type": result.get('@type'),
             "name": result.get('name'),
-            "url": self.baseURL + result.get('url'),
+            "url": result.get('url'),
             "poster": result.get('image'),
             "description": result.get('description'),
             "review": {
